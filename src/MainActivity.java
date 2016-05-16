@@ -1,4 +1,3 @@
-package myapp.swanand.com.stacktop;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -16,7 +15,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import myapp.swanand.com.stacklist.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,10 +26,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
     }
-
     public void getJson(View v)
     {
             new BackgroundTask().execute();
@@ -54,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         String JSON_STRING;
         @Override
         protected void onPreExecute() {
+
+                //enter the URL for json
 
             json_url="https://api.stackexchange.com/2.2/search/advanced?order=desc&sort=activity&accepted=False&answers=0&tagged=android&site=stackoverflow";
 
